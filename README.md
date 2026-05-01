@@ -1,69 +1,51 @@
-<p align="center">
-  <img src="frontend/static/logo.png" alt="AI Healthcare Logo" width="120"/>
-</p>
 
-<h1 align="center">AI Healthcare System</h1>
-<p align="center">
-  <strong>Bridging Lab Results to Patient Understanding with AI</strong>
-</p>
+## **AI Health**
 
-<p align="center">
-  <a href="https://ai-healthcare-system.streamlit.app/">
-    <img src="https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Live Demo"/>
-  </a>
-  <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
-  <img src="https://img.shields.io/github/license/pavanbadempet/AI-Healthcare-System?style=for-the-badge" alt="License"/>
-</p>
+**AI Health**  platform is a next-generation patient portal designed specifically for diagnostic centers, built to tackle a common issue: lab reports are often hard to understand.
+
+Patients typically receive reports filled with complex numbers and medical terms, leaving them unsure about what the results actually mean. This solution bridges that gap by combining:
+
+**Smart Screening:** Instant risk insights for conditions like diabetes, heart disease, and more.
+**AI-Powered Guidance:** An interactive “medical assistant” that breaks down reports into simple, easy-to-understand language.
+
+It’s a complete end-to-end system—diagnostic centers get a powerful dashboard to manage patients efficiently, while patients gain a secure, user-friendly portal that helps them truly understand their health.
 
 ---
 
-## 🎯 About The Project
-
-**AI Healthcare System** is a next-gen patient portal built for diagnostic centers. We wanted to solve a simple problem: **Lab reports are confusing.**
-
-Most patients get a PDF full of numbers they don't understand. Our platform fixes this by combining:
-1.  **Automated Screening:** Immediate risk assessment for Diabetes, Heart Disease, and more.
-2.  **AI Explanation:** A "Medical Assistant" chat that explains the report in plain English (powered by Gemini).
-
-It's a full-stack solution diagnostic centers get a dashboard to manage patients, and patients get a secure portal to understand their health.
-
----
-
-## ✨ Features
+## Features
 
 - **For Patients:**
-    - 📄 **Smart Reports:** Upload a PDF and get an instant AI summary.
-    - 🤖 **Health Assistant:** Chat with an AI that knows your medical history.
-    - 🩺 **Risk Screening:** ML models check your vitals (Diabetes, Kidney, Liver, etc.).
+    - **Smart Reports:** Upload a PDF and get an instant AI summary.
+    - **Health Assistant:** Chat with an AI that knows your medical history.
+    - **Risk Screening:** ML models check your vitals (Diabetes, Kidney, Liver, etc.).
 
 - **For Doctors & Clinics:**
-    - 🏥 **Patient Dashboard:** View all patient records in one place.
-    - 📈 **Trend Analysis:** Visualize patient health metrics over time.
-    - 🔐 **Secure & compliant:** Role-based access and data isolation.
+    - **Patient Dashboard:** View all patient records in one place.
+    - **Trend Analysis:** Visualize patient health metrics over time.
+    - **Secure & compliant:** Role-based access and data isolation.
 
-### 🔬 Supported Screenings
+###  Supported Screenings
 We use trained ML models (XGBoost/RandomForest) to screen for:
 *   **Diabetes:** (Glucose, BMI, Insulin)
 *   **Heart Disease:** (Cholesterol, BP, ECG)
 *   **Liver & Kidney Health**
 *   **Lung Cancer Risk**
 
-### 🤖 Under the Hood
+### Under the Hood
 *   **RAG Architecture:** We use separate vector stores for each user to prevent data leakage.
 *   **Vision AI:** Gemini Pro Vision reads raw PDF reports so you don't have to type data manually.
 *   **Security:** Full JWT authentication and session management.
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
-### Option 1: Docker (Recommended)
+### Step 1: Docker (
 Spin up the entire stack with one command:
 
 ```bash
 # Clone the repository
-git clone https://github.com/pavanbadempet/AI-Healthcare-System.git
+git clone [https://github.com/pavanbadempet/AI-Healthcare-System.git](https://github.com/Philip-Lucky/AIHealth)
 cd AI-Healthcare-System
 
 # Configure environment
@@ -74,13 +56,8 @@ cp .env.example .env
 docker-compose up --build
 ```
 
-| Service | URL |
-|---------|-----|
-| **App (Frontend)** | http://localhost:8501 |
-| **API Docs** | http://localhost:8000/docs |
-| **MLflow UI** | http://localhost:5000 |
 
-### Option 2: Local Development
+### Step 2: Development
 
 **Prerequisites**: Python 3.10+, pip
 
@@ -99,7 +76,7 @@ uvicorn backend.main:app --reload --port 8000
 streamlit run frontend/main.py
 ```
 
-### Option 3: Quick Scripts (Windows)
+### Option 3: Quick Scripts 
 ```powershell
 # Run everything
 .\scripts\runners\run_app.bat
@@ -120,7 +97,7 @@ streamlit run frontend/main.py
 | **GenAI** | Gemini Pro, LangChain | Chat Assistant & RAG Pipeline |
 | **Vector DB** | FAISS | Semantic Search & Memory |
 | **Database** | SQLite | User Data & Chat History |
-| **DevOps** | Docker, GitHub Actions | Containerization & CI/CD |
+| **DevOps** | Docker, Kubernetes (AWS EKS) GitHub Actions | Containerization & CI/CD |
 | **Hosting** | Streamlit Cloud, Render | Production Deployment |
 
 ---
@@ -187,18 +164,6 @@ GitHub Actions automatically runs on every push:
 3. Set required environment variables:
    - `GOOGLE_API_KEY` - Gemini API key
    - `SECRET_KEY` - JWT signing key
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please check [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ---
 
